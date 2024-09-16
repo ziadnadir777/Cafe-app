@@ -1,0 +1,80 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #d2a17a;
+}
+
+.login-image {
+  width: 60%; /* Increase image width */
+  height: 100%;
+  background-image: url('../../assets/bg.png'); /* Update with correct image path */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px 0 0 50px;
+}
+
+.login-form {
+  width: 40%; /* Adjust form width */
+  background-color: #a87555;
+  border-radius: 0 50px 50px 0;
+  padding: 60px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Enhance the shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.active-tab {
+  font-size: 24px; /* Increase size for more emphasis */
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffe9d5;
+  color: #5c3c2a;
+  font-size: 16px;
+}
+
+.sign-in-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c3c2a;
+  color: white;
+  border: none;
+  border-radius: 30px; /* More rounded for modern look */
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+  background-color: #3e2a1b;
+}
+
+.forgot-password {
+  margin-top: 15px;
+  color: #ffccb3;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.waiters-page {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.order-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 15px;
+    width: 80%;
+    transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-10px);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    color: #888;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.order-header p {
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.order-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.product-image {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.order-details h3 {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-details p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.order-status {
+    display: flex;
+    align-items: center; /* Align progress bar and buttons vertically */
+    gap: 10px;
+    position: relative; /* Add relative positioning for the progress bar */
+}
+
+.status-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.status-btn.processing {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.status-btn.processing.active,
+.status-btn.processing:hover {
+    background-color: #ff7043;
+    color: #fff;
+}
+
+.status-btn.completed {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.status-btn.completed.active,
+.status-btn.completed:hover {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.status-btn:active {
+    transform: scale(0.98);
+}
+
+/* Corrected Progress bar styles */
+.progress-bar {
+    margin-top: 10px; /* Adds space between buttons and progress bar */
+    width: 120px; /* Adjust width as needed */
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar .bar {
+    height: 100%;
+    background-color: #ff5722; /* Change to your desired color */
+    width: 0; /* Initial width */
+    transition: width 0.5s ease;
+}
+
+/* Show full progress example */
+.status-btn.processing.loading .progress-bar .bar {
+    width: 100%; /* Adjust this to show progress percentage */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.status-btn.processing.loading .spinner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

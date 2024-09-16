@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.order-history-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.loading, .error, .no-orders {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.order-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.order-title p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.order-total {
+    font-size: 1.2rem;
+    color: #2e86de;
+    font-weight: 700;
+}
+
+.order-items {
+    padding-top: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-info, .product-price {
+    flex: 1;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-price p {
+    margin: 0;
+    text-align: right;
+    font-size: 1rem;
+    color: #777;
+}
+
+.no-items {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Example product image styling (add image URLs dynamically in React) */
+.product-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
